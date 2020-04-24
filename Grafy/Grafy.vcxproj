@@ -138,15 +138,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Graph.cpp" />
-    <ClCompile Include="Krawędź.cpp" />
+    <ClCompile Include="Bellmanalgorythm.cpp" />
+    <ClCompile Include="Graph_list.cpp" />
+    <ClCompile Include="Graph_martix.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Wierzchołek.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bellmanalgorythm.h" />
     <ClInclude Include="Graph.h" />
+    <ClInclude Include="Graph_list.h" />
+    <ClInclude Include="Graph_martix.h" />
     <ClInclude Include="Krawędź.h" />
-    <ClInclude Include="Wierzchołek.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
