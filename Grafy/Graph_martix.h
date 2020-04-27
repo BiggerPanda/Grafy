@@ -17,7 +17,7 @@ public:
 
 	const int getValue(int one, int two) const { return this->matrix[one][two]; }
 	
-	Graph_matrix(int nodesAmount, int density);
+	Graph_matrix(int nodesAmount, double density);
 
 	Graph_matrix() :Graph() {};
 };

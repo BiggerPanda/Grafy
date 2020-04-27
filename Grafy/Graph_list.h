@@ -1,6 +1,6 @@
 #pragma once
 #include "Graph.h"
-static int regulatingValue = 2; // value that helps to change value next to rand
+static int regulatingValue = -1; // value that helps to change value next to rand
 
 class Graph_list :
 	public Graph

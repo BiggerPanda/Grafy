@@ -31,7 +31,7 @@ public:
 	virtual void createInput(const int startNode) const =0;
 
 	virtual ~Graph() {};
-	Graph(int in_amountOfNodes, int in_amountOfEdges, int in_density) : main_amountOfNodes(in_amountOfNodes), main_amountOfEges(in_amountOfEdges), main_density(in_density) {};
+	Graph(int in_amountOfNodes, int in_amountOfEdges, double in_density) : main_amountOfNodes(in_amountOfNodes), main_amountOfEges(in_amountOfEdges), main_density(in_density) {};
 	Graph() {};
 
 };

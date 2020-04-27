@@ -15,7 +15,7 @@ std::string Driver(int(&verticlesStorage)[5],double(&densityStorage)[4],int loop
 				std::shared_ptr<T> graph = std::make_shared<T>(verticles, density);
 				int startingNode = rand() % verticles;
 
-				graph->fillGraph(true);
+				graph->fillGraph(false);
 
 				accumulatedTime += bellmanAlg(std::move(graph), startingNode);
 			}
@@ -31,14 +31,12 @@ std::string Driver(int(&verticlesStorage)[5],double(&densityStorage)[4],int loop
 }
 int main()
 {
-	int verticesStorage[5] = { 5,10,20,60,100 };
-	double densityStorage[4] = { 0.25,0.5,0.75,1 }; 
+	int verticesStorage[5] = { 5,10,30,50,100 };
+	double densityStorage[4] = { 0.25,0.5,0.75,1.00 }; 
 	int loop = 100;
 
-	int verticesStoragetest[1] = { 5 };
-	double densityStoragetest[1] = { 0.25 };
-	int looptest = 10;
-
+	//int verticesStorage[1] = { 5};
+	//double densityStorage[4] = { 0.25,0.5,0.75,1.00 };
 	std::ofstream file("Times.txt");
 	if (!file.is_open()) {
 

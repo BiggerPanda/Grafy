@@ -183,6 +183,7 @@ void resoults(std::string pathString[], int distanceStorage[], int nodesAmount, 
 			resoultsFile << "The shortest path: " << pathString[itrNodes] << itrNodes;
 		}
 		std::cout << std::endl;
-		resoultsFile << std::endl;
 	}
+	
+	resoultsFile << std::endl;
 }

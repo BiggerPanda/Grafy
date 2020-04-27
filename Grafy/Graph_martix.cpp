@@ -1,7 +1,7 @@
 #include "Graph_martix.h"
 #include "Graph_list.h"
 
-Graph_matrix::Graph_matrix(int nodesAmount, int density):Graph(nodesAmount,static_cast<int>(density*nodesAmount*(nodesAmount-1)), density), matrix(std::make_unique<std::unique_ptr<int[]>[]>(nodesAmount))
+Graph_matrix::Graph_matrix(int nodesAmount, double density):Graph(nodesAmount,static_cast<int>(density*nodesAmount*(nodesAmount-1)), density), matrix(std::make_unique<std::unique_ptr<int[]>[]>(nodesAmount))
 {
 	/*Look of matrix
 	  1 2 3 4 5 6 ->nodes
