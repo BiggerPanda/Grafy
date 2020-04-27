@@ -14,13 +14,13 @@ class Graph
 protected:
 	int main_amountOfNodes;
 	int main_amountOfEges;
-	int main_density;
+	double main_density;
 public:
 	const int nodesGetter()
 	{
 		return this->main_amountOfNodes;
 	}
-	const int egesGetter() 
+	const int edgesGetter() 
 	{
 		return this->main_amountOfEges;
 	}

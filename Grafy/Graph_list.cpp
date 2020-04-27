@@ -93,7 +93,7 @@ const int Graph_list::readFile(const std::string fileName)
 void Graph_list::createInput(const int startNode) const
 {
 	std::ofstream out_file("out_input.txt");
-		if (!out_file.is_open)
+		if (!out_file.is_open())
 		{
 			std::cerr << "File not open" << std::endl;
 			return;

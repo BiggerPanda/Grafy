@@ -1,6 +1,7 @@
 #include "Graph_martix.h"
+#include "Graph_list.h"
 
-Graph_martix::Graph_martix(int nodesAmount, int density):Graph(nodesAmount,static_cast<int>(density*nodesAmount*(nodesAmount-1)), density), matrix(std::make_unique<std::unique_ptr<int[]>[]>(nodesAmount))
+Graph_matrix::Graph_matrix(int nodesAmount, int density):Graph(nodesAmount,static_cast<int>(density*nodesAmount*(nodesAmount-1)), density), matrix(std::make_unique<std::unique_ptr<int[]>[]>(nodesAmount))
 {
 	/*Look of matrix
 	  1 2 3 4 5 6 ->nodes
@@ -34,7 +35,7 @@ Graph_martix::Graph_martix(int nodesAmount, int density):Graph(nodesAmount,stati
 }
 
 
-void Graph_martix::fillGraph(const bool allowLoops) const
+void Graph_matrix::fillGraph(const bool allowLoops) const
 {
 	if (this->main_density==1)
 	{
@@ -85,7 +86,7 @@ void Graph_martix::fillGraph(const bool allowLoops) const
 	}
 }
 
-void Graph_martix::printGraph() const
+void Graph_matrix::printGraph() const
 {
 	std::cout << "\n Matrix represetation of Graph \n\n";
 	for (int nodeIter = 0; nodeIter < this->main_amountOfNodes; nodeIter++)
@@ -116,7 +117,7 @@ void Graph_martix::printGraph() const
 	std::cout << std::endl;
 }
 
-const int Graph_martix::readFile(const std::string fileName) 
+const int Graph_matrix::readFile(const std::string fileName) 
 {
 	std::ifstream inFile(fileName);
 	if(!inFile.is_open())
@@ -151,7 +152,7 @@ const int Graph_martix::readFile(const std::string fileName)
 	return startingNode;
 }
 
-void Graph_martix::createInput(const int startNode) const
+void Graph_matrix::createInput(const int startNode) const
 {
 	std::ofstream outFile("OutInput.txt");
 	if (!outFile.is_open())
